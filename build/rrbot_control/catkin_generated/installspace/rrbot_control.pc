@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/install
+
+Name: rrbot_control
+Description: Description of rrbot_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/irfan/Desktop/ros_ws/install/lib 
+Requires: 

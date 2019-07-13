@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/install
+
+Name: robotiq_2f
+Description: Description of robotiq_2f
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/irfan/Desktop/ros_ws/install/lib 
+Requires: 

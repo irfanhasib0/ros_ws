@@ -1,0 +1,17 @@
+source devel/setup.sh
+roslaunch rrbot_description rrbot_rviz.launch
+roslaunch rrbot_gazebo rrbot_world.launch
+roslaunch rrbot_control rrbot_control.launch
+rostopic pub -1 /rrbot/joint1_position_controller/command std_msgs/Float64 "data: 1.5"
+rostopic pub -1 /rrbot/joint2_position_controller/command std_msgs/Float64 "data: 1.0"
+sudo dpkg --configure -a
+sudo apt-get -f install
+sudo apt-get install ros-lunar-ros-control ros-lunar-ros-controllers
+sudo apt-get install ros-lunar-ros-controllers
+sudo apt install ros-lunar-gazebo-ros-control
+sudo apt-get install ros-kinetic-gazebo-ros
+sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control
+
+
+[WARN] [1545173862.539468, 97.203000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
+

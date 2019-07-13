@@ -1,0 +1,20 @@
+C:\Users\Irfan Hasib\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu16.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\hasib
+sudo apt install minicom
+ls /dev/tty*
+ls -l /dev/tty*
+lsusb
+sudo chmod 666 /dev/ttyS5
+stty -F /dev/ttyS3 -a
+sudo apt install cu
+cu -l /dev/ttyS5 -s 9600
+
+wget -o arduino.zip https://downloads.arduino.cc/arduino-1.8.8-linux64.tar.xz
+unzip arduino.zip
+tar xvf arduino-1.8.8-linux64.tar.xz
+cd arduino-1.8.8
+chmod +x install.sh
+./install.sh
+sudo apt-get install ros-kinetic-rosserial-arduino
+sudo apt-get install ros-kinetic-rosserial
+git clone https://github.com/ros-drivers/rosserial.git
+rosrun rosserial_arduino make_libraries.py .

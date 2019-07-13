@@ -1,0 +1,13 @@
+$ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+$ source ~/.bashrc
+Then, I will assume you want to create a package, so you can follow these steps:
+
+$ mkdir -p path_to_my_workspace/workspace_name/src
+$ cd path_to_my_workspace/workspace_name/src
+$ catkin_init_workspace
+$ cd path_to_my_workspace/workspace_name/
+$ catkin_make
+$ source path_to_my_workspace/workspace_name/devel/setup.bash
+sudo rosdep init
+rosdep update
+sudo apt-get install ros-luunar-gazebo-ros

@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/devel
+
+Name: rosserial_server
+Description: Description of rosserial_server
+Version: 0.8.0
+Cflags: -I/home/irfan/Desktop/ros_ws/src/rosserial/rosserial_server/include
+Libs: -L/home/irfan/Desktop/ros_ws/devel/lib 
+Requires: roscpp rosserial_msgs std_msgs topic_tools

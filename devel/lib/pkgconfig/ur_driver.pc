@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/devel
+
+Name: ur_driver
+Description: Description of ur_driver
+Version: 1.2.1
+Cflags: -I/home/irfan/Desktop/ros_ws/devel/include
+Libs: -L/home/irfan/Desktop/ros_ws/devel/lib 
+Requires: dynamic_reconfigure

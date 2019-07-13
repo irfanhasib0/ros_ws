@@ -1,0 +1,11 @@
+cd src
+catkin_create_pkg rrbot_comm std_msgs rospy roscpp
+cd rrbot_comm
+mkdir scripts
+cd scripts
+sudo nano pub.py >> copy code
+sudo nano sub.py >> copy code
+catkin_make
+sudo chmod +x pub.py
+sudo chmod +x sub.py
+rosrun rrbot_comm pub.py

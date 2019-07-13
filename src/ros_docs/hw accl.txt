@@ -1,0 +1,6 @@
+/etc/X11/xorg.conf.d/disable-gpu.conf
+
+
+Section "Extensions"
+    Option "GLX" "Disable"
+EndSection

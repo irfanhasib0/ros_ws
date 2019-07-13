@@ -1,0 +1,30 @@
+sudo apt-get remove --purge ros-*
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+
+sudo dpkg --configure -a / apt-get -f install /apt remove
+sudo apt-get update
+sudo apt-get install ros-melodic-desktop-full
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+sudo apt-get install ros-melodic-ros-control ros-melodic-ros-controllers
+
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+cat /etc/apt/sources.list.d/gazebo-stable.list
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install gazebo9
+sudo apt-get install ros-melodic-gazebo-ros
+sudo apt-get install ros-melodic-gazebo-ros-pkgs ros-melodic-gazebo-ros-control 
+
+
+#sudo apt-get install ros-lunar-robot-state-publisher
+sudo apt-get install x11-apps
+echo "export DISPLAY=:0" >> ~/.bashrc
+source ~/.bashrc
+
+sudo apt-get update
+sudo apt-get upgrade

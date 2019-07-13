@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/devel
+
+Name: ur5_gazebo
+Description: Description of ur5_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/irfan/Desktop/ros_ws/devel/lib 
+Requires: 
