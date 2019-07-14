@@ -29,6 +29,7 @@ rrbot:
     type: "velocity_controllers/JointPositionController"
     joint: liny_joint
     pid: {p: 100.0, i: 0.01, d: 1.0}
+  
   # lfin_controller
   #  type "velocity_controllers/JointPositionController"
   #  joint joint_lf

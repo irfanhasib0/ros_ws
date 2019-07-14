@@ -67,7 +67,25 @@
     <xacro:property name="wrist_1_length" value="${d4 - elbow_offset - shoulder_offset}" />
     <xacro:property name="wrist_2_length" value="${d5}" />
     <xacro:property name="wrist_3_length" value="${d6}" />
+    <xacro:include filename="$(find ur_description)/urdf/rrbot_grip.xacro" />
+    
+    
 
+   
+
+    <joint name="linx_joint" type="prismatic">
+    <parent link="${prefix}world"/>
+    <child link="box1"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="5" effort="1000" velocity="1.0"/>
+    </joint>
+    <joint name="liny_joint" type="prismatic">
+    <parent link="box1"/>
+    <child link="box"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0" upper="5" effort="1000" velocity="0.2"/>
+    </joint>
+    
     <link name="${prefix}base_link" >
       <visual>
         <geometry>
@@ -101,6 +119,9 @@
       <dynamics damping="0.0" friction="0.0"/>
     </joint>
 
+ 
+<!--xarco:grip_plam prefix=""/-->
+  
     <link name="${prefix}shoulder_link">
       <visual>
         <geometry>

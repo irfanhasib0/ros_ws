@@ -35,7 +35,7 @@ def serpub():
 	
 def rrbot_launch():
     os.system("source devel/setup.sh")
-    _thread.start_new_thread(os.system,("roslaunch rrbot_gazebo rrbot_world.launch",))
+    _thread.start_new_thread(os.system,("roslaunch ur_gazebo ur10.launch",))
 
 def rrbot_pub():
     os.system("source devel/setup.sh")

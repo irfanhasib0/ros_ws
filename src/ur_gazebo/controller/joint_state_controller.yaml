@@ -1,3 +1,11 @@
 joint_state_controller:
     type: joint_state_controller/JointStateController
     publish_rate: 50  
+linx_controller:
+    type: "velocity_controllers/JointPositionController"
+    joint: linx_joint
+    pid: {p: 100.0, i: 0.01, d: 1.0}
+liny_controller:
+    type: "velocity_controllers/JointPositionController"
+    joint: liny_joint
+    pid: {p: 100.0, i: 0.01, d: 1.0}
