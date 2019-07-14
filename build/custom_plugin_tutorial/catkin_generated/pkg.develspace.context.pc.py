@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "roscpp;gazebo_ros".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lgazebo_tutorials".split(';') if "-lgazebo_tutorials" != "" else []
 PROJECT_NAME = "gazebo_tutorials"
-PROJECT_SPACE_DIR = "/home/irfan/Desktop/ros_ws/devel"
+PROJECT_SPACE_DIR = "/home/irfan_hasib/Desktop/ros_ws/devel"
 PROJECT_VERSION = "0.0.0"

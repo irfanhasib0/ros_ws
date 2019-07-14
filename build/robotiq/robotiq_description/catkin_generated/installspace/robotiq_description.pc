@@ -1,8 +1,0 @@
-prefix=/home/irfan/Desktop/ros_ws/install
-
-Name: robotiq_description
-Description: Description of robotiq_description
-Version: 0.1.0
-Cflags: 
-Libs: -L/home/irfan/Desktop/ros_ws/install/lib 
-Requires: 

@@ -1,8 +1,8 @@
-prefix=/home/irfan/Desktop/ros_ws/devel
+prefix=/home/irfan_hasib/Desktop/ros_ws/devel
 
 Name: rrbot_control
 Description: Description of rrbot_control
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/irfan/Desktop/ros_ws/devel/lib 
+Libs: -L/home/irfan_hasib/Desktop/ros_ws/devel/lib 
 Requires: 

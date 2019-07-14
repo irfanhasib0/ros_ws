@@ -1,8 +1,0 @@
-prefix=/home/irfan/Desktop/ros_ws/install
-
-Name: ur_gazebo
-Description: Description of ur_gazebo
-Version: 1.2.1
-Cflags: 
-Libs: -L/home/irfan/Desktop/ros_ws/install/lib 
-Requires: 
