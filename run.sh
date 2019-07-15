@@ -1,4 +1,4 @@
 #!/bin/bash
 source devel/setup.sh
-roslaunch rrbot_gazebo rrbot_world.launch
+python3  run_gui_ur.py
 

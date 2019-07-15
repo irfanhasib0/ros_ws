@@ -1,11 +1,19 @@
 joint_state_controller:
     type: joint_state_controller/JointStateController
     publish_rate: 50  
-linx_controller:
+box1_linx_controller:
     type: "velocity_controllers/JointPositionController"
-    joint: linx_joint
+    joint: box1_linx_joint
     pid: {p: 100.0, i: 0.01, d: 1.0}
-liny_controller:
+box1_liny_controller:
     type: "velocity_controllers/JointPositionController"
-    joint: liny_joint
+    joint: box1_liny_joint
+    pid: {p: 100.0, i: 0.01, d: 1.0}
+box2_linx_controller:
+    type: "velocity_controllers/JointPositionController"
+    joint: box2_linx_joint
+    pid: {p: 100.0, i: 0.01, d: 1.0}
+box2_liny_controller:
+    type: "velocity_controllers/JointPositionController"
+    joint: box2_liny_joint
     pid: {p: 100.0, i: 0.01, d: 1.0}
