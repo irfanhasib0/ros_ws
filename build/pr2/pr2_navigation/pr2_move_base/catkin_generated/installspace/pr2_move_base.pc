@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/install
+
+Name: pr2_move_base
+Description: Description of pr2_move_base
+Version: 0.1.28
+Cflags: 
+Libs: -L/home/irfan/Desktop/ros_ws/install/lib 
+Requires: move_base_msgs pr2_msgs actionlib actionlib_msgs rospy dynamic_reconfigure pr2_controllers_msgs pr2_common_action_msgs

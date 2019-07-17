@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/install
+
+Name: pr2_navigation_perception
+Description: Description of pr2_navigation_perception
+Version: 0.1.28
+Cflags: -I/home/irfan/Desktop/ros_ws/install/include
+Libs: -L/home/irfan/Desktop/ros_ws/install/lib -lpr2_point_cloud_filters
+Requires: semantic_point_annotator laser_filters pr2_machine topic_tools pr2_navigation_self_filter geometry_msgs dynamic_reconfigure sensor_msgs roscpp tf filters message_filters laser_geometry laser_tilt_controller_filter pcl_ros

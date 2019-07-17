@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/devel
+
+Name: pr2_machine
+Description: Description of pr2_machine
+Version: 1.12.4
+Cflags: 
+Libs: -L/home/irfan/Desktop/ros_ws/devel/lib 
+Requires: 

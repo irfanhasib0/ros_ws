@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/install
+
+Name: pr2_navigation_self_filter
+Description: Description of pr2_navigation_self_filter
+Version: 0.1.28
+Cflags: -I/home/irfan/Desktop/ros_ws/install/include -I/usr/include/bullet
+Libs: -L/home/irfan/Desktop/ros_ws/install/lib -lpr2_navigation_geometric_shapes -lpr2_navigation_self_filter -lBulletSoftBody -lBulletDynamics -lBulletCollision -lLinearMath
+Requires: roscpp tf filters sensor_msgs urdf resource_retriever visualization_msgs pcl_ros

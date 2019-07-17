@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/devel
+
+Name: pr2_app_manager
+Description: Description of pr2_app_manager
+Version: 0.6.1
+Cflags: 
+Libs: -L/home/irfan/Desktop/ros_ws/devel/lib 
+Requires: 

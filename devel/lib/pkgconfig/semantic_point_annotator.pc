@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/devel
+
+Name: semantic_point_annotator
+Description: Description of semantic_point_annotator
+Version: 0.1.28
+Cflags: -I/home/irfan/Desktop/ros_ws/src/pr2/pr2_navigation/semantic_point_annotator/include
+Libs: -L/home/irfan/Desktop/ros_ws/devel/lib 
+Requires: roscpp tf pcl_ros

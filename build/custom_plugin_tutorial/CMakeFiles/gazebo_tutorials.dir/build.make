@@ -156,7 +156,6 @@ gazebo_tutorials_EXTERNAL_OBJECTS =
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
@@ -214,7 +213,6 @@ gazebo_tutorials_EXTERNAL_OBJECTS =
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /home/irfan/Desktop/ros_ws/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so

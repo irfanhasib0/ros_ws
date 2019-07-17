@@ -1,5 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
+message(FATAL_ERROR "Could not find messages which '/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv' depends on. Did you forget to specify generate_messages(DEPENDENCIES ...)?
+Cannot locate message [GeoPose] in package [geographic_msgs] with paths [['/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg']]")
 message(STATUS "robot_localization: 0 messages, 4 services")
 
 set(MSG_I_FLAGS "-Igeographic_msgs:/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Iuuid_msgs:/home/irfan/Desktop/ros_ws/src/unique_identifier/uuid_msgs/msg")
@@ -25,11 +27,6 @@ add_custom_target(_robot_localization_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetPose.srv" NAME_WE)
 add_custom_target(_robot_localization_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_localization" "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetPose.srv" "geometry_msgs/PoseWithCovarianceStamped:geometry_msgs/Pose:geometry_msgs/PoseWithCovariance:std_msgs/Header:geometry_msgs/Quaternion:geometry_msgs/Point"
-)
-
-get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv" NAME_WE)
-add_custom_target(_robot_localization_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_localization" "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv" "geographic_msgs/GeoPoint:geographic_msgs/GeoPose:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv" NAME_WE)
@@ -58,12 +55,6 @@ _generate_srv_cpp(robot_localization
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/robot_localization
 )
 _generate_srv_cpp(robot_localization
-  "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv"
-  "${MSG_I_FLAGS}"
-  "/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg/GeoPoint.msg;/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg/GeoPose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/robot_localization
-)
-_generate_srv_cpp(robot_localization
   "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -85,8 +76,6 @@ add_dependencies(robot_localization_generate_messages robot_localization_generat
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/ToggleFilterProcessing.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_cpp _robot_localization_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetPose.srv" NAME_WE)
-add_dependencies(robot_localization_generate_messages_cpp _robot_localization_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_cpp _robot_localization_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_cpp _robot_localization_generate_messages_check_deps_${_filename})
@@ -115,12 +104,6 @@ _generate_srv_eus(robot_localization
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/robot_localization
 )
 _generate_srv_eus(robot_localization
-  "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv"
-  "${MSG_I_FLAGS}"
-  "/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg/GeoPoint.msg;/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg/GeoPose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/robot_localization
-)
-_generate_srv_eus(robot_localization
   "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -142,8 +125,6 @@ add_dependencies(robot_localization_generate_messages robot_localization_generat
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/ToggleFilterProcessing.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_eus _robot_localization_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetPose.srv" NAME_WE)
-add_dependencies(robot_localization_generate_messages_eus _robot_localization_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_eus _robot_localization_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_eus _robot_localization_generate_messages_check_deps_${_filename})
@@ -172,12 +153,6 @@ _generate_srv_lisp(robot_localization
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/robot_localization
 )
 _generate_srv_lisp(robot_localization
-  "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv"
-  "${MSG_I_FLAGS}"
-  "/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg/GeoPoint.msg;/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg/GeoPose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/robot_localization
-)
-_generate_srv_lisp(robot_localization
   "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -199,8 +174,6 @@ add_dependencies(robot_localization_generate_messages robot_localization_generat
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/ToggleFilterProcessing.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_lisp _robot_localization_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetPose.srv" NAME_WE)
-add_dependencies(robot_localization_generate_messages_lisp _robot_localization_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_lisp _robot_localization_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_lisp _robot_localization_generate_messages_check_deps_${_filename})
@@ -229,12 +202,6 @@ _generate_srv_nodejs(robot_localization
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/robot_localization
 )
 _generate_srv_nodejs(robot_localization
-  "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv"
-  "${MSG_I_FLAGS}"
-  "/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg/GeoPoint.msg;/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg/GeoPose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/robot_localization
-)
-_generate_srv_nodejs(robot_localization
   "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -256,8 +223,6 @@ add_dependencies(robot_localization_generate_messages robot_localization_generat
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/ToggleFilterProcessing.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_nodejs _robot_localization_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetPose.srv" NAME_WE)
-add_dependencies(robot_localization_generate_messages_nodejs _robot_localization_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_nodejs _robot_localization_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_nodejs _robot_localization_generate_messages_check_deps_${_filename})
@@ -286,12 +251,6 @@ _generate_srv_py(robot_localization
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robot_localization
 )
 _generate_srv_py(robot_localization
-  "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv"
-  "${MSG_I_FLAGS}"
-  "/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg/GeoPoint.msg;/home/irfan/Desktop/ros_ws/src/geographic_info/geographic_msgs/msg/GeoPose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robot_localization
-)
-_generate_srv_py(robot_localization
   "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -313,8 +272,6 @@ add_dependencies(robot_localization_generate_messages robot_localization_generat
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/ToggleFilterProcessing.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_py _robot_localization_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetPose.srv" NAME_WE)
-add_dependencies(robot_localization_generate_messages_py _robot_localization_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/SetDatum.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_py _robot_localization_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/irfan/Desktop/ros_ws/src/robot_localization/srv/GetState.srv" NAME_WE)
 add_dependencies(robot_localization_generate_messages_py _robot_localization_generate_messages_check_deps_${_filename})

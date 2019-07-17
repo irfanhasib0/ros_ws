@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/install
+
+Name: pr2_navigation_local
+Description: Description of pr2_navigation_local
+Version: 0.1.28
+Cflags: 
+Libs: -L/home/irfan/Desktop/ros_ws/install/lib 
+Requires: 

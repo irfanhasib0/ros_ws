@@ -1,0 +1,8 @@
+prefix=/home/irfan/Desktop/ros_ws/devel
+
+Name: laser_tilt_controller_filter
+Description: Description of laser_tilt_controller_filter
+Version: 0.1.28
+Cflags: -I/home/irfan/Desktop/ros_ws/src/pr2/pr2_navigation/laser_tilt_controller_filter/include
+Libs: -L/home/irfan/Desktop/ros_ws/devel/lib -llaser_tilt_controller_filter
+Requires: filters sensor_msgs roscpp pluginlib pr2_msgs
