@@ -24,7 +24,7 @@ Q3 = [0,0,0,0,0,0]
 client = None
 #g = FollowJointTrajectoryGoal()
 traj = JointTrajectory()
-traj.joint_names = JOINT_NAMES
+#traj.joint_names = JOINT_NAMES
 fb_joints=[]
 fb_names=[]
 def cb_joint_states(data):
@@ -33,7 +33,7 @@ def cb_joint_states(data):
         fb_joints=list(data.position)
         fb_names=list(data.name)
 rospy.init_node("test_move", anonymous=True, disable_signals=True)
-pub0 = rospy.Publisher('/arm_controller/command', JointTrajectory, queue_size=10)
+pub0 = rospy.Publisher('/l_arm_controller/command', JointTrajectory, queue_size=10)
 box1_x = rospy.Publisher('/box1_linx_controller/command', Float64, queue_size=10)
 box1_y = rospy.Publisher('/box1_liny_controller/command', Float64, queue_size=10)
 def box1_pub(x,y):
@@ -49,6 +49,7 @@ angc=0
 angd=0
 ange=0
 angf=0
+angg=0
 #['elbow_joint', 'linx_joint', 'liny_joint', 'shoulder_lift_joint', 'shoulder_pan_joint', 'wrist_1_joint', 'wrist_2_joint', 'wrist_3_joint']
 fb_anga=0
 fb_angb=0
@@ -61,7 +62,7 @@ while(True):
 
 	if anga>=1.5:
 		anga=0
-	Q1=[anga,angb,angc,angd,ange,angf]
+	Q1=[anga,angb,angc,angd,ange,angf,angg]
 	try:
 		fb_anga=fb_joints[fb_names.index('shoulder_pan_joint')]
 		fb_angb=fb_joints[fb_names.index('shoulder_lift_joint')]
@@ -76,15 +77,15 @@ while(True):
 	
 	if anga!=0:
 		traj.points = [
-			JointTrajectoryPoint(positions=Q1, velocities=[0]*6, time_from_start=rospy.Duration(0.2))
+			JointTrajectoryPoint(positions=Q1, velocities=[0]*7, time_from_start=rospy.Duration(0.2))
 			#JointTrajectoryPoint(positions=Q2, velocities=[0]*6, time_from_start=rospy.Duration(3.0)),
 			]
 	else:
 		traj.points = [
-			JointTrajectoryPoint(positions=Q1, velocities=[0]*6, time_from_start=rospy.Duration(1.0))
+			JointTrajectoryPoint(positions=Q1, velocities=[0]*7, time_from_start=rospy.Duration(1.0))
 			#JointTrajectoryPoint(positions=Q2, velocities=[0]*6, time_from_start=rospy.Duration(3.0)),
 			]
 	pub0.publish(traj)
-	box1_pub(0,0)
+	#box1_pub(1,1)
 	rate.sleep()
 	
