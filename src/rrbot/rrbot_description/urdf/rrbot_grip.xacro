@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!-- Revolute-Revolute Manipulator -->
+<robot name="rrbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Constants for robot dimensions -->
+  
+
+<link name="box">
+    <collision>
+      <origin xyz="-1 ${dist} .5" rpy="0 0 0"/>
+      <geometry>	
+	<box size=".4 .2 1.0"/>
+      </geometry>
+    </collision>
+   <visual>
+      <origin xyz="-1 ${dist} .5" rpy="0 0 0"/>
+      <geometry>
+	<box size=".4 .2 1.0"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+
+    <inertial>
+      <origin xyz="-1 ${2.0} 0.5" rpy="0 0 0"/>
+      <mass value="${mass}"/>
+      <inertia
+	  ixx="${mass / 12.0 * (width*width + height1*height1)}" ixy="0.0" ixz="0.0"
+	  iyy="${mass / 12.0 * (height1*height1 + width*width)}" iyz="0.0"
+	  izz="${mass / 12.0 * (width*width + width*width)}"/>
+    </inertial>
+  </link>
+
+  
+  <!--xarco:macro name="grip_plam" params="prefix"-->
+<link name="box1">
+    <!--collision>
+      <origin xyz="-1 ${dist} .05" rpy="0 0 0"/>
+      <geometry>	
+	<box size=".4 .2 .1"/>
+      </geometry>
+    </collision>
+   <visual>
+      <origin xyz="-1 ${dist} .05" rpy="0 0 0"/>
+      <geometry>
+	<box size=".4 .2 .1"/>
+      </geometry>
+      <material name="orange"/>
+    </visual-->
+
+    <inertial>
+      <origin xyz="-1 ${2.0} 0.1" rpy="0 0 0"/>
+      <mass value="${mass}"/>
+      <inertia
+	  ixx="${mass / 12.0 * (width*width + height1*height1)}" ixy="0.0" ixz="0.0"
+	  iyy="${mass / 12.0 * (height1*height1 + width*width)}" iyz="0.0"
+	  izz="${mass / 12.0 * (width*width + width*width)}"/>
+    </inertial>
+  </link>
+  <!--joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="box1"/>
+  </joint-->
+  <!--joint name="linx_joint" type="prismatic">
+    <parent link="world"/>
+    <child link="box"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="5" effort="1000" velocity="1.0"/>
+  </joint>
+  
+  </xarco:macro>
+  <joint name="joint_plam" type="prismatic">
+    <parent link="world"/>
+    <child link="box"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="5" effort="1000" velocity="1.0"/>
+  </joint-->
+  
+  <!--joint name="liny_joint" type="prismatic">
+    <parent link="link1"/>
+    <child link="box"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0" upper="5" effort="1000" velocity="0.2"/>
+  </joint-->
+
+  
+
+</robot>

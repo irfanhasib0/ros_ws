@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!-- Revolute-Revolute Manipulator -->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<xacro:property name="dist" value="1.0" /> <!-- Link 3 -->
+<!--xacro:property name="mass_obj" value="1" /--> <!-- arbitrary value for mass -->
+<!--xacro:property name="width" value="0.2" /--> <!-- Square dimensions (widthxwidth) of beams -->
+<!--xacro:property name="height" value=".4" /--> <!-- Link 1 -->
+  <!-- Constants for robot dimensions -->
+
+<xacro:macro name="obj_box" params="name1 name2 width height mass_obj *origin">
+<link name="${name1}">
+    <collision>
+      <xacro:insert_block name="origin" />
+      <geometry>	
+	<box size="${width} ${width} ${height}"/>
+      </geometry>
+    </collision>
+   <visual>
+      <xacro:insert_block name="origin" />
+      <geometry>
+	<box size="${width} ${width} ${height}"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+
+    <inertial>
+      <xacro:insert_block name="origin" />
+      <mass value="${mass_obj}"/>
+      <inertia
+	  ixx="${mass_obj / 12.0 * (width*width + height*height)}" ixy="0.0" ixz="0.0"
+	  iyy="${mass_obj / 12.0 * (height*height + width*width)}" iyz="0.0"
+	  izz="${mass_obj / 12.0 * (width*width + width*width)}"/>
+    </inertial>
+  </link>
+<link name="${name2}">
+    <!--collision>
+      <origin xyz="-1 ${dist} .05" rpy="0 0 0"/>
+      <geometry>	
+	<box size=".4 .2 .1"/>
+      </geometry>
+    </collision>
+   <visual>
+      <origin xyz="-1 ${dist} .05" rpy="0 0 0"/>
+      <geometry>
+	<box size=".4 .2 .1"/>
+      </geometry>
+      <material name="orange"/>
+    </visual-->
+
+    <inertial>
+      <origin xyz="-1 ${2.0} 0.1" rpy="0 0 0"/>
+      <mass value="${mass_obj}"/>
+      <inertia
+	  ixx="${0 / 12.0 * (width*width + height*height)}" ixy="0.0" ixz="0.0"
+	  iyy="${0 / 12.0 * (height*height + width*width)}" iyz="0.0"
+	  izz="${0 / 12.0 * (width*width + width*width)}"/>
+    </inertial>
+  </link>
+  <joint name="${name1}_linx_joint" type="prismatic">
+    <parent link="${prefix}world"/>
+    <child link="_${name1}"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="5" effort="1000" velocity="1.0"/>
+  </joint>
+
+  <joint name="${name1}_liny_joint" type="prismatic">
+    <parent link="_${name1}"/>
+    <child link="${name1}"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0" upper="5" effort="1000" velocity="1.0"/>
+   </joint>
+
+<transmission name="${name1}_lx_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${name1}_linx_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+    </joint>  
+    <actuator name="${name1}_lx_motor">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<!--transmission name="left_fin_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_lf">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+    </joint>  
+    <actuator name="lf_motor">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission-->
+<transmission name="${name1}_ly_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${name1}_liny_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+    </joint>  
+    <actuator name="${name1}_ly_motor">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+</xacro:macro>
+
+
+<xacro:obj_box name1="box1" name2="_box1" width=".2" height=".4" mass_obj="1">
+        <origin xyz="-1 1 0.2" rpy="0 0 0"/>  
+</xacro:obj_box>
+
+<xacro:obj_box name1="box2" name2="_box2" width=".2" height=".4" mass_obj="1">
+        <origin xyz="1 1 0.2" rpy="0 0 0"/>  
+</xacro:obj_box>
+    
+
+
+
+
+</robot>
+
+ 
