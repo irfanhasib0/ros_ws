@@ -65,10 +65,10 @@
       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
-        <cameraName>rrbot/camera1</cameraName>
+        <cameraName>camera_top</cameraName>
         <imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-        <frameName>camera_link_optical</frameName>
+        <frameName>camera_link_top</frameName>
         <!-- setting hackBaseline to anything but 0.0 will cause a misalignment
             between the gazebo sensor image and the frame it is supposed to
             be attached to -->

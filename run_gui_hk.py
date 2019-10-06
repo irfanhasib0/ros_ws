@@ -43,7 +43,7 @@ def rrbot_pub():
 
 def cam_sub():
     os.system("source devel/setup.sh")
-    _thread.start_new_thread(os.system,("rosrun rrbot_comm cam_sub.py",))
+    _thread.start_new_thread(os.system,("python src/husky_mod/scripts/cam_sub.py",))
 def cam1_sub():
     os.system("source devel/setup.sh")
     _thread.start_new_thread(os.system,("rosrun rrbot_comm cam1_sub.py",))
