@@ -8,8 +8,8 @@ from subprocess import call
 
 top = tkinter.Tk()
 canv = tkinter.Canvas(top, bg="blue", height=250, width=300)
-os.environ['ROS_MASTER_URI']='http://192.168.11.7:11311/'
-os.environ['ROS_IP']='192.168.11.7'
+os.environ['ROS_MASTER_URI']='http://192.168.11.10:11311/'
+os.environ['ROS_IP']='192.168.11.10'
 
 #os.system('. ./master.sh')
 #os.system('roscore')
