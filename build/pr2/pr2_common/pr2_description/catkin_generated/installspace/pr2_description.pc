@@ -1,8 +1,0 @@
-prefix=/home/irfan/Desktop/ros_ws/install
-
-Name: pr2_description
-Description: Description of pr2_description
-Version: 1.12.4
-Cflags: 
-Libs: -L/home/irfan/Desktop/ros_ws/install/lib 
-Requires: xacro

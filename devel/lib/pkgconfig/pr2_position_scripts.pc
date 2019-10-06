@@ -1,8 +1,0 @@
-prefix=/home/irfan/Desktop/ros_ws/devel
-
-Name: pr2_position_scripts
-Description: Description of pr2_position_scripts
-Version: 0.6.1
-Cflags: 
-Libs: -L/home/irfan/Desktop/ros_ws/devel/lib 
-Requires: 

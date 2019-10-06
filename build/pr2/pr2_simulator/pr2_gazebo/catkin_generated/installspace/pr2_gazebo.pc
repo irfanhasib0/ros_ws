@@ -1,8 +1,0 @@
-prefix=/home/irfan/Desktop/ros_ws/install
-
-Name: pr2_gazebo
-Description: Description of pr2_gazebo
-Version: 2.0.14
-Cflags: 
-Libs: -L/home/irfan/Desktop/ros_ws/install/lib 
-Requires: 

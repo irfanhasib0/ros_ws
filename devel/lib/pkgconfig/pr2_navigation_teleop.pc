@@ -1,8 +1,0 @@
-prefix=/home/irfan/Desktop/ros_ws/devel
-
-Name: pr2_navigation_teleop
-Description: Description of pr2_navigation_teleop
-Version: 0.1.28
-Cflags: 
-Libs: -L/home/irfan/Desktop/ros_ws/devel/lib 
-Requires: pr2_teleop pr2_machine topic_tools

@@ -1,8 +1,0 @@
-prefix=/home/irfan/Desktop/ros_ws/install
-
-Name: semantic_point_annotator
-Description: Description of semantic_point_annotator
-Version: 0.1.28
-Cflags: -I/home/irfan/Desktop/ros_ws/install/include
-Libs: -L/home/irfan/Desktop/ros_ws/install/lib 
-Requires: roscpp tf pcl_ros

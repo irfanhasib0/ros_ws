@@ -1,8 +1,0 @@
-prefix=/home/irfan/Desktop/ros_ws/install
-
-Name: rosserial_mbed
-Description: Description of rosserial_mbed
-Version: 0.8.0
-Cflags: -I/home/irfan/Desktop/ros_ws/install/include
-Libs: -L/home/irfan/Desktop/ros_ws/install/lib 
-Requires: message_runtime
